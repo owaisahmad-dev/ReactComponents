@@ -1,28 +1,19 @@
 import React, { useState } from "react";
+import MenuItem from "./MenuItem";
 
-import DishDetails from "./DishDetailComponent";
-
-const Menu = ({ dishes }) => {
-  const [selectedDish, setSelectedDish] = useState(null);
-
-  const menu = this.props.dishes.map((dish) => {
+const Menu = ({ dishes, setSelectedDish }) => {
+  const menu = dishes.map((dish) => {
     return (
-      <div className="col-12 col-md-5 m-1">
-        {/* <Card key={dish.id}
-                  onClick={() => setSelectedDish(dish)}>
-                  <CardImg width="100%" src={dish.image} alt={dish.name} />
-                  <CardImgOverlay>
-                      <CardTitle>{dish.name}</CardTitle>
-                  </CardImgOverlay>
-                </Card> */}
-      </div>
+      <MenuItem key={dish.id} dish={dish} setSelectedDish={setSelectedDish} />
     );
   });
 
   return (
-    <div className="container">
-      <div className="row">{menu}</div>
-      {selectedDish != null ? <DishDetails dish={selectedDish} /> : <div></div>}
+    <div>
+      <h1 className="font-semibold text-4xl text-slate-700 p-4">
+        Select an Item from Menu to view details !
+      </h1>
+      <div className="flex flex-row p-4">{menu}</div>
     </div>
   );
 };

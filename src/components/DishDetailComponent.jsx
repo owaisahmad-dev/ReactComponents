@@ -1,4 +1,5 @@
 import React from "react";
+import Comment from "./Comment";
 
 const DishDetail = ({ dish }) => {
   const renderDish = (dish) => {
@@ -39,7 +40,22 @@ const DishDetail = ({ dish }) => {
     return comments;
   };
 
-  return <></>;
+  return (
+    <>
+      <h1 class="font-semibold text-slate-900 text-3xl p-4">{dish.name}</h1>
+      <img className="p-5 w-72 rounded" src={dish.image}></img>
+      <p class="p-5">
+        <em>That's a great choice!</em> <br />
+        {dish.description}
+      </p>
+      <p className="p-5 text-slate-700 font-semibold">
+        What people have to say?
+      </p>
+      {dish.comments.map((comment, index) => (
+        <Comment key={index} comment={comment} />
+      ))}
+    </>
+  );
 };
 
 export default DishDetail;
