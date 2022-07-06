@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Menu from "./MenuComponent";
-import { DISHES } from "./dishes";
+import { DISHES } from "../../data/dishes";
 
 const App = () => {
   const [dishes, setDishes] = useState(DISHES);
