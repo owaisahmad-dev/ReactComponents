@@ -11,3 +11,5 @@ The application is a pretty simple one. It is a restaurant's landing page where 
 - React
 - Vite
 - Tailwind CSS
+
+[Live Preview](https://owaisahmad-dev.github.io/react-components-practice/)
