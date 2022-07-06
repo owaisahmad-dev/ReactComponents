@@ -8,4 +8,6 @@ The application is a pretty simple one. It is a restaurant's landing page where 
 
 ## Technologies Used
 
-I have used React + Vite + TailwindCSS for the frontend, and used Docker for deployment. This project doesn't have any backend.
+- React
+- Vite
+- Tailwind CSS

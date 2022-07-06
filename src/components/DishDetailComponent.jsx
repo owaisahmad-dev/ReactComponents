@@ -44,6 +44,9 @@ const DishDetail = ({ dish }) => {
     <>
       <h1 class="font-semibold text-slate-900 text-3xl p-4">{dish.name}</h1>
       <img className="p-5 w-72 rounded" src={dish.image}></img>
+      <div className="p-5">
+        <b>Price:</b> ${dish.price}
+      </div>
       <p class="p-5">
         <em>That's a great choice!</em> <br />
         {dish.description}
